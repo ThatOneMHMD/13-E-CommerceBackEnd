@@ -1,3 +1,4 @@
+// import data
 const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
 
@@ -18,7 +19,7 @@ router.get('/', async (req, res) => {
 // GET a single tag by id, including its associated Product data
 router.get('/:id', async (req, res) => {
   try {
-    const tagData = await Traveller.findByPk(req.params.id, {
+    const tagData = await Tag.findByPk(req.params.id, {
       include: [{ model: Product, through: ProductTag}]
     });
     if (!tagData) {
@@ -81,5 +82,5 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-
+// export changes to router data
 module.exports = router;

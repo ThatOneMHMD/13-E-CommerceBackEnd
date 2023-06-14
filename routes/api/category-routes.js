@@ -1,3 +1,4 @@
+// import data (router-express package and models)
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
@@ -85,4 +86,5 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+// export changes to router data
 module.exports = router;

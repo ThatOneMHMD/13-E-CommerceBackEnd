@@ -4,19 +4,18 @@ const Category = require('./Category');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag'); 
 
-// Products belongsTo Category/ MY WORK
+// Products belongsTo Category/ MY WORK (each product has only one category)
 Product.belongsTo(Category, {
   foreignKey: 'category_id',
   onDelete: 'CASCADE'
 });
-
-// Categories have many Products/ MY WORK
+// Categories have many Products/ MY WORK (each category can have many products)
 Category.hasMany(Product, {
   foreignKey: 'category_id',
   onDelete: 'CASCADE'
 });
 
-// Products belongToMany Tags (through ProductTag)/ MY WORK
+// Products belongToMany Tags (through ProductTag)/ MY WORK (each prduct can have many tags)
 Product.belongsToMany(Tag, {
   through: {
     model: ProductTag,
@@ -24,8 +23,7 @@ Product.belongsToMany(Tag, {
     unique: false
   },
 });
-
-// Tags belongToMany Products (through ProductTag)/ MY WORK
+// Tags belongToMany Products (through ProductTag)/ MY WORK (each tag can have many products)
 Tag.belongsToMany(Product, {
   through: {
     model: ProductTag,
@@ -34,6 +32,7 @@ Tag.belongsToMany(Product, {
   },
 });
 
+// export models after defining the associations between them
 module.exports = {
   Product,
   Category,
