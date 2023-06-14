@@ -1,22 +1,21 @@
-# E-Commerce Back-End
+# Back-End-Based E-Commerce Application
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description
 
-This is the code files for the corresponsing back-end application (leveraging Express.js API) that functions as a professional E-Commerce company manager. Once run according to the instructions in the [Installation](#installation) and the [Usage](#usage) sections below, the user/business owner will be able to view and manage the products together with their associated tags and categories, in their E-Commerce company so that they can organize and plan their business appropriately while competing with other e-commerce companies.
+This is the code files for the corresponding back-end application (leveraging Express.js API) that functions as a professional E-Commerce company manager. Once run according to the instructions in the [Installation](#installation) and the [Usage](#usage) sections below, the user/business owner will be able to view and manage the products together with their associated tags and categories, in their E-Commerce company so that they can organize and plan their business appropriately while competing with other e-commerce companies.
 
 ## Table of Contents
 
-- [E-Commerce Back-End](#e-commerce-back-end)
-  - [Description](#description)
-  - [Table of Contents](#table-of-contents)
-  - [Demo Video](#demo-video)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Credits](#credits)
+- [Description](#description)
+- [Table of Contents](#table-of-contents)
+- [Demo Video](#demo-video)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Credits](#credits)
 
 ## Demo Video
 
@@ -40,13 +39,13 @@ To use your own professional Employee Manager, "git clone" the repo down to your
 
 To start the application, follow these steps carefully:
 
-1. Rename the ".env.EXAMPLE" file to the left as ".env", then enter your own mysql information
+1. Rename the ".env.EXAMPLE" file to the left as ".env", then enter your own MySQL information
 2. Open Integrated Terminal and make sure you are in the right directory
-3. In the "db" directory, type in, in the terminal, the following: 'mysql -u "YOUR-OWN-mysql-username" -p'. Press ENTER and then enter your password
-4. After you have accessed your mysql terminal, type in this: 'SOURCE schema.sql;', this will run the mysql code and show the number of affected rows. Type 'quit' to exit mysql terminal and then go to a normal node terminal
-5. Type 'node ./seeds/index.js' and press enter to seed the tables with data (if you wish to change seeding data, go into the './seeds/' folder and add you own)
+3. In the "db" directory, type in the terminal the following: 'MySQL -u "YOUR-OWN-mysql-username" -p'. Press ENTER and then enter your password
+4. After you have accessed your MySQL terminal, type in this: 'SOURCE schema.sql;'. This will run the MySQL code and show the number of affected rows. Type 'quit' to exit MySQL terminal and then go to a normal node terminal
+5. Type 'node ./seeds/index.js' and press enter to seed the tables with data (if you wish to change seeding data, go into the './seeds/' folder and add your own)
 6. Once that is done, go back in the root folder directory and type in the following: 'npm install'
-7. Now, type in the foolowing: 'node ./server.js' to start the server
+7. Now, type in the following: 'node ./server.js' to start the server
 8. Lastly, go into Insomnia (or any other back-end app) and start running the API calls to manage your products!
 
 ## License
